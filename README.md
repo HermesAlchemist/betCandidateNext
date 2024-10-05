@@ -7,6 +7,7 @@
 - **Veja o contrato no Etherscan**: [Contrato BetCandidate](https://sepolia.etherscan.io/address/0xf769620cB16Dde326539B403A89c4E6e46A99a27)
 
 [![bet-Candidate.jpg](https://i.postimg.cc/7Y2L8wnB/bet-Candidate.jpg)](https://postimg.cc/GHbRv0NY)
+[![betcandidatebet.jpg](https://i.postimg.cc/8krb3f9x/betcandidatebet.jpg)](https://postimg.cc/23rvLyzx)
 
 
 
