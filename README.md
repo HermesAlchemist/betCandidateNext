@@ -13,12 +13,12 @@
 - [Licença](#licença)
 - [Contato](#contato)
 
----
+___
 
 # Visão Geral
 O BetCandidate permite que os usuários participem de apostas descentralizadas sobre o resultado das eleições presidenciais americanas. Utilizando a carteira MetaMask, os usuários podem conectar-se à plataforma, escolher seu candidato preferido e apostar uma quantidade desejada de ETH. Após o encerramento das eleições e divulgação do resultado oficial, os vencedores podem reivindicar seus prêmios diretamente na plataforma.
 
----
+___
 
 # Funcionalidades
 Conexão com MetaMask: Os usuários podem conectar suas carteiras MetaMask para interagir com a plataforma.
