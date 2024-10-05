@@ -5,7 +5,7 @@ BetCandidate é uma plataforma de apostas on-chain que permite aos usuários apo
 - [Visão Geral](#visao-geral)
 - [Funcionalidades](#Funcionalidades)
 - [Tecnologias Utilizadas](#Tecnologias-utilizadas)
-Pré-requisitos
+- [Pré-requisitos](#pre-requisitos)
 Instalação
 Uso
 Contrato Inteligente
