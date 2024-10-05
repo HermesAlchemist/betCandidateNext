@@ -60,6 +60,9 @@ O BetCandidate permite que os usuários participem de apostas descentralizadas s
 - **React Context API**: Gerenciamento de estado global para autenticação.
 
 
+---
+
+
 # Pré-requisitos
 
 Antes de começar, certifique-se de ter instalado em sua máquina:
@@ -68,6 +71,9 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 - **NPM** (gerenciador de pacotes do Node.js)
 - **MetaMask** (extensão instalada em seu navegador)
 - **Conta na rede Sepolia Testnet** com ETH de teste (pode ser obtido em faucets)
+
+
+---
 
 
 # Instalação
@@ -87,6 +93,9 @@ cd BetCandidate/dapp
 ```bash
 npm install
 ```
+
+
+---
 
 
 # Uso
@@ -119,9 +128,17 @@ Abra `http://localhost:3000` para ver o aplicativo.
 - Após o resultado oficial das eleições, acesse a plataforma.
 - Se o candidato em quem você apostou venceu, clique em "Pegar meu prêmio" para receber seus ganhos.
 
+
+---
+
+
 ## Observações
 - **Taxa de Comissão**: Uma taxa de 10% é deduzida do montante total das apostas como comissão para manutenção da plataforma.
 - **Transparência**: O código do contrato inteligente é público e pode ser verificado no Etherscan.
+
+
+---
+
 
 # Contrato Inteligente
 O contrato inteligente está implantado na rede Sepolia Testnet.
@@ -129,70 +146,109 @@ O contrato inteligente está implantado na rede Sepolia Testnet.
 - **Endereço do Contrato**: `0xf769620cB16Dde326539B403A89c4E6e46A99a27`
 - **Etherscan**: [Ver Contrato no Etherscan](https://sepolia.etherscan.io/address/0xf769620cb16dde326539b403a89c4e6e46a99a27)
 
+
+---
+
+
 # Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 Passos para contribuir:
 
-1. Faça um fork do projeto.
+1. **Faça um fork do projeto**.
+
 No GitHub, clique em "Fork" no canto superior direito da página do repositório.
 
-2. Clone o repositório forkado:
-   
-git clone https://github.com/seu-usuario/BetCandidate.git
+2. **Clone o repositório forkado**:
 
-3. Crie uma nova branch:
+```bash   
+git clone https://github.com/seu-usuario/BetCandidate.git
+```
+3. **Crie uma nova branch**:
 
 ```bash
 Copiar código
 git checkout -b feature/nova-funcionalidade
 ```
 
-4. Commit suas mudanças:
+4. **Commit suas mudanças**:
 
-bash
-Copiar código
+```bash
 git commit -m 'Adiciona nova funcionalidade'
-Envie para a branch:
+```
 
-bash
-Copiar código
+5. **Envie para o seu fork no GitHub**:
+
+```bash
 git push origin feature/nova-funcionalidade
-Abra um pull request.
+```
+
+6. **Abra um pull request**:
+- No GitHub, vá até o seu fork e clique em "Compare & Pull Request".
+
+
+---
+
 
 # Licença
 Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
 
-# Contato
-Nome: Heitor
-Email: seu-email@example.com
-GitHub: seu-usuario
-# Agradecimentos
-Agradecemos a todos os colaboradores e usuários que ajudam a melhorar o BetCandidate. Sua participação é essencial para o sucesso deste projeto.
 
-Screenshots
+---
+
+
+# Contato
+Nome: Heitor Magalhães Lemos
+Email: heitorlemos@gmail.com
+GitHub: HermesAlchemist
+
+
+---
+
+
+# Agradecimentos
+Agradecemos a todos os colaboradores e usuários que ajudam a melhorar o BetCandidate. E ao professor Luiz, que me auxiliou nesse projeto.
+
+---
+
+
+# Screenshots
 (Opcional: Adicione screenshots do aplicativo para ilustrar a interface e funcionalidades.)
 
-Notas Adicionais
-Segurança: Certifique-se de nunca compartilhar suas chaves privadas. O BetCandidate não solicita nem armazena informações privadas dos usuários.
-Testnet: Este aplicativo utiliza a Sepolia Testnet. Os ETH utilizados são de teste e não possuem valor real.
-Responsabilidade: Este projeto é para fins educacionais e de demonstração. Não nos responsabilizamos por quaisquer perdas ou danos decorrentes do uso deste aplicativo.
-Troubleshooting
+
+---
+
+
+# Notas Adicionais
+- **Segurança**: Certifique-se de nunca compartilhar suas chaves privadas. O BetCandidate não solicita nem armazena informações privadas dos usuários.
+- **Testnet**: Este aplicativo utiliza a Sepolia Testnet. Os ETH utilizados são de teste e não possuem valor real.
+- **Responsabilidade**: Este projeto é para fins educacionais e de demonstração. Não nos responsabilizamos por quaisquer perdas ou danos decorrentes do uso deste aplicativo.
+
+
+---
+
+
+# Troubleshooting
+
 Se você encontrar problemas ao executar o aplicativo, tente as seguintes etapas:
 
-Verifique a Conexão com a Rede Sepolia:
+- **Verifique a Conexão com a Rede Sepolia**:
+   - Certifique-se de que sua MetaMask está conectada à rede Sepolia.
+   - Se necessário, adicione a rede Sepolia manualmente na MetaMask.
 
-Certifique-se de que sua MetaMask está conectada à rede Sepolia.
-Se necessário, adicione a rede Sepolia manualmente na MetaMask.
-Erros ao Instalar Dependências:
+- **Erros ao Instalar Dependências**:
+   - Certifique-se de que está utilizando a versão correta do Node.js e NPM.
+   - Exclua a pasta node_modules e o arquivo package-lock.json, e execute npm install novamente.
 
-Certifique-se de que está utilizando a versão correta do Node.js e NPM.
-Exclua a pasta node_modules e o arquivo package-lock.json, e execute npm install novamente.
-Problemas com a MetaMask:
+- **Problemas com a MetaMask**:
+   - Atualize a extensão MetaMask para a versão mais recente.
+   - Limpe o cache do navegador ou tente em um navegador diferente.
 
-Atualize a extensão MetaMask para a versão mais recente.
-Limpe o cache do navegador ou tente em um navegador diferente.
-Desenvolvimento Futuro
+
+---
+
+
+# Desenvolvimento Futuro
 Adicionar Mais Candidatos:
 
 Expandir a lista de candidatos disponíveis para apostas.
@@ -200,8 +256,10 @@ Melhorias na Interface:
 
 Implementar animações e transições suaves.
 Melhorar a responsividade em dispositivos móveis.
-Funcionalidades Avançadas:
+- **Funcionalidades Avançadas**:
+   - Implementar um sistema de apostas múltiplas.
+   - Adicionar suporte a outras criptomoedas.
 
-Implementar um sistema de apostas múltiplas.
-Adicionar suporte a outras criptomoedas.
+---
+
 Esperamos que você aproveite o BetCandidate! Se tiver alguma dúvida ou sugestão, não hesite em entrar em contato.
