@@ -91,7 +91,7 @@ Transparência: O código do contrato inteligente é público e pode ser verific
 O contrato inteligente está implantado na rede Sepolia Testnet.
 
 - Endereço do Contrato: 0xf769620cB16Dde326539B403A89c4E6e46A99a27
-- Etherscan: [Ver Contrato no Etherscan](https://sepolia.etherscan.io/address/0xf769620cb16dde326539b403a89c4e6e46a99a27)
+- Etherscan: [Ver Contrato no Etherscan](https://sepolia.etherscan.io/address/0xf769620cb16dde326539b403a89c4e6e46a99a27).
 
 # Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
