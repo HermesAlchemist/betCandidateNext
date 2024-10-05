@@ -1,5 +1,5 @@
-# *BetCandidate*
-*BetCandidate* é uma plataforma de apostas on-chain que permite aos usuários apostar em quem será o próximo presidente dos Estados Unidos. O aplicativo é construído com Next.js e React, utilizando contratos inteligentes na rede Ethereum (Sepolia Testnet) para garantir transparência e segurança em todas as transações.
+# **BetCandidate**
+**BetCandidate** é uma plataforma de apostas on-chain que permite aos usuários apostar em quem será o próximo presidente dos Estados Unidos. O aplicativo é construído com Next.js e React, utilizando contratos inteligentes na rede Ethereum (Sepolia Testnet) para garantir transparência e segurança em todas as transações.
 
 # Índice
 - [Visão Geral](#visão-geral)
