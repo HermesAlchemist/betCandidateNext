@@ -1,6 +1,8 @@
 # **BetCandidate**
 **BetCandidate** é uma plataforma de apostas on-chain que permite aos usuários apostar em quem será o próximo presidente dos Estados Unidos. O aplicativo é construído com Next.js e React, utilizando contratos inteligentes na rede Ethereum (Sepolia Testnet) para garantir transparência e segurança em todas as transações.
 
+---
+
 # Índice
 - [Visão Geral](#visão-geral)
 - [Funcionalidades](#funcionalidades)
@@ -13,12 +15,12 @@
 - [Licença](#licença)
 - [Contato](#contato)
 
-___
+---
 
 # Visão Geral
 O BetCandidate permite que os usuários participem de apostas descentralizadas sobre o resultado das eleições presidenciais americanas. Utilizando a carteira MetaMask, os usuários podem conectar-se à plataforma, escolher seu candidato preferido e apostar uma quantidade desejada de ETH. Após o encerramento das eleições e divulgação do resultado oficial, os vencedores podem reivindicar seus prêmios diretamente na plataforma.
 
-___
+---
 
 # Funcionalidades
 Conexão com MetaMask: Os usuários podem conectar suas carteiras MetaMask para interagir com a plataforma.
@@ -64,31 +66,34 @@ npm install
 ```
 
 # Uso
-Executando o Projeto Localmente
-Inicie o servidor de desenvolvimento:
 
-bash
-Copiar código
+## Executando o Projeto Localmente
+Inicie o servidor de desenvolvimento:
+```bash
 npm run dev
+```
 Acesse o aplicativo no navegador:
 
-Abra http://localhost:3000 para ver o aplicativo.
+Abra `http://localhost:3000` para ver o aplicativo.
 
-Interagindo com a Plataforma
-Conecte-se com a MetaMask:
+## Interagindo com a Plataforma
+### Conecte-se com a MetaMask:
 
 Certifique-se de que sua MetaMask está conectada à rede Sepolia Testnet.
-Clique em "Conectar MetaMask" na página inicial.
-Aposte em um Candidato:
+Clique em `"Conectar MetaMask"` na página inicial.
+
+### Aposte em um Candidato:
 
 Após conectar-se, você será redirecionado para a página de apostas.
-Escolha um dos candidatos disponíveis e clique em "Apostar neste candidato".
+Escolha um dos candidatos disponíveis e clique em `"Apostar neste candidato"`.
 Insira o valor em ETH que deseja apostar.
-Reivindique seu Prêmio:
+
+### Reivindique seu Prêmio:
 
 Após o resultado oficial das eleições, acesse a plataforma.
 Se o candidato em quem você apostou venceu, clique em "Pegar meu prêmio" para receber seus ganhos.
-Observações
+
+## Observações
 Taxa de Comissão: Uma taxa de 10% é deduzida do montante total das apostas como comissão para manutenção da plataforma.
 Transparência: O código do contrato inteligente é público e pode ser verificado no Etherscan.
 
