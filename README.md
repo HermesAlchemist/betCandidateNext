@@ -3,27 +3,28 @@ BetCandidate é uma plataforma de apostas on-chain que permite aos usuários apo
 
 #Índice
 - [Visão Geral](#visão-geral)
-- [Funcionalidades](#Funcionalidades)
-- [Tecnologias Utilizadas](#Tecnologias-utilizadas)
-- [Pré-requisitos](#pre-requisitos)
-- [Instalação](#instalacao)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
 - [Uso](#uso)
 - [Contrato Inteligente](#contrato-inteligente)
-- [Contribuição](#contribuicao)
-- [Licença](#licenca)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 - [Contato](#contato)
 
 # Visão Geral
 O BetCandidate permite que os usuários participem de apostas descentralizadas sobre o resultado das eleições presidenciais americanas. Utilizando a carteira MetaMask, os usuários podem conectar-se à plataforma, escolher seu candidato preferido e apostar uma quantidade desejada de ETH. Após o encerramento das eleições e divulgação do resultado oficial, os vencedores podem reivindicar seus prêmios diretamente na plataforma.
 
-Funcionalidades
+# Funcionalidades
 Conexão com MetaMask: Os usuários podem conectar suas carteiras MetaMask para interagir com a plataforma.
 Verificação de Rede: O aplicativo verifica se o usuário está conectado à rede Sepolia e solicita a mudança de rede, se necessário.
 Apostar em Candidatos: Os usuários podem apostar em um dos candidatos disponíveis até a data limite de apostas.
 Reivindicar Prêmios: Após o resultado oficial, os vencedores podem reivindicar seus prêmios.
 Interface Intuitiva: Utiliza Bootstrap para uma interface amigável e responsiva.
 Transparência On-Chain: Todas as transações são realizadas através de contratos inteligentes na rede Ethereum (Sepolia Testnet).
-Tecnologias Utilizadas
+
+# Tecnologias Utilizadas
 Next.js 13: Framework React para desenvolvimento web.
 React: Biblioteca JavaScript para construção de interfaces de usuário.
 Web3.js: Biblioteca para interagir com o Ethereum blockchain.
@@ -31,14 +32,16 @@ MetaMask: Extensão de navegador para interação com a blockchain Ethereum.
 Solidity: Linguagem de programação para contratos inteligentes na Ethereum.
 Bootstrap 5: Framework CSS para estilização e responsividade.
 React Context API: Gerenciamento de estado global para autenticação.
-Pré-requisitos
+
+# Pré-requisitos
 Antes de começar, certifique-se de ter instalado em sua máquina:
 
 Node.js (versão 14 ou superior)
 NPM (gerenciador de pacotes do Node.js)
 MetaMask (extensão instalada em seu navegador)
 Conta na rede Sepolia Testnet com ETH de teste (pode ser obtido em faucets)
-Instalação
+
+# Instalação
 Clone o repositório:
 
 bash
@@ -111,14 +114,14 @@ Copiar código
 git push origin feature/nova-funcionalidade
 Abra um pull request.
 
-Licença
+# Licença
 Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
 
-Contato
+# Contato
 Nome: Heitor
 Email: seu-email@example.com
 GitHub: seu-usuario
-Agradecimentos
+# Agradecimentos
 Agradecemos a todos os colaboradores e usuários que ajudam a melhorar o BetCandidate. Sua participação é essencial para o sucesso deste projeto.
 
 Screenshots
