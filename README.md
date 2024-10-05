@@ -57,7 +57,8 @@ Instale as dependências:
 bash
 Copiar código
 npm install
-Uso
+
+# Uso
 Executando o Projeto Localmente
 Inicie o servidor de desenvolvimento:
 
@@ -85,12 +86,14 @@ Se o candidato em quem você apostou venceu, clique em "Pegar meu prêmio" para 
 Observações
 Taxa de Comissão: Uma taxa de 10% é deduzida do montante total das apostas como comissão para manutenção da plataforma.
 Transparência: O código do contrato inteligente é público e pode ser verificado no Etherscan.
-Contrato Inteligente
+
+# Contrato Inteligente
 O contrato inteligente está implantado na rede Sepolia Testnet.
 
-Endereço do Contrato: 0xf769620cB16Dde326539B403A89c4E6e46A99a27
-Etherscan: Ver Contrato no Etherscan
-Contribuição
+- Endereço do Contrato: 0xf769620cB16Dde326539B403A89c4E6e46A99a27
+- Etherscan: Ver Contrato no Etherscan
+
+# Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 Passos para contribuir:
