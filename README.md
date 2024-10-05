@@ -198,9 +198,9 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para d
 
 
 # Contato
-Nome: Heitor Magalhães Lemos
-Email: heitorlemos@gmail.com
-GitHub: HermesAlchemist
+- **Nome**: Heitor Magalhães Lemos
+- **Email**: heitorlemos@gmail.com
+- **GitHub**: HermesAlchemist
 
 
 ---
