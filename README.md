@@ -5,7 +5,7 @@
 # **Site Online Pelo Vecel**
 - **https://betcandidate.vercel.app/**
 
-![Pagina inicial do BetCandidate](![image](https://github.com/user-attachments/assets/73016dc2-fc34-412e-adf6-b37db222a7a7))
+[![bet-Candidate.jpg](https://i.postimg.cc/7Y2L8wnB/bet-Candidate.jpg)](https://postimg.cc/GHbRv0NY)
 
 
 
