@@ -34,10 +34,15 @@ O BetCandidate permite que os usuários participem de apostas descentralizadas s
 # Funcionalidades
 
 **Conexão com MetaMask**: Os usuários podem conectar suas carteiras MetaMask para interagir com a plataforma.
+
 **Verificação de Rede**: O aplicativo verifica se o usuário está conectado à rede Sepolia e solicita a mudança de rede, se necessário.
+
 **Apostar em Candidatos**: Os usuários podem apostar em um dos candidatos disponíveis até a data limite de apostas.
+
 **Reivindicar Prêmios**: Após o resultado oficial, os vencedores podem reivindicar seus prêmios.
+
 **Interface Intuitiva**: Utiliza Bootstrap para uma interface amigável e responsiva.
+
 **Transparência On-Chain**: Todas as transações são realizadas através de contratos inteligentes na rede Ethereum (Sepolia Testnet).
 
 
