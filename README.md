@@ -33,17 +33,17 @@ O BetCandidate permite que os usuários participem de apostas descentralizadas s
 
 # Funcionalidades
 
-**Conexão com MetaMask**: Os usuários podem conectar suas carteiras MetaMask para interagir com a plataforma.
+- **Conexão com MetaMask**: Os usuários podem conectar suas carteiras MetaMask para interagir com a plataforma.
 
-**Verificação de Rede**: O aplicativo verifica se o usuário está conectado à rede Sepolia e solicita a mudança de rede, se necessário.
+- **Verificação de Rede**: O aplicativo verifica se o usuário está conectado à rede Sepolia e solicita a mudança de rede, se necessário.
 
-**Apostar em Candidatos**: Os usuários podem apostar em um dos candidatos disponíveis até a data limite de apostas.
+- **Apostar em Candidatos**: Os usuários podem apostar em um dos candidatos disponíveis até a data limite de apostas.
 
-**Reivindicar Prêmios**: Após o resultado oficial, os vencedores podem reivindicar seus prêmios.
+- **Reivindicar Prêmios**: Após o resultado oficial, os vencedores podem reivindicar seus prêmios.
 
-**Interface Intuitiva**: Utiliza Bootstrap para uma interface amigável e responsiva.
+- **Interface Intuitiva**: Utiliza Bootstrap para uma interface amigável e responsiva.
 
-**Transparência On-Chain**: Todas as transações são realizadas através de contratos inteligentes na rede Ethereum (Sepolia Testnet).
+- **Transparência On-Chain**: Todas as transações são realizadas através de contratos inteligentes na rede Ethereum (Sepolia Testnet).
 
 
 ---
@@ -51,13 +51,13 @@ O BetCandidate permite que os usuários participem de apostas descentralizadas s
 
 # Tecnologias Utilizadas
 
-**Next.js 14.3.3**: Framework React para desenvolvimento web.
-**React**: Biblioteca JavaScript para construção de interfaces de usuário.
-**Web3.js**: Biblioteca para interagir com o Ethereum blockchain.
-**MetaMask**: Extensão de navegador para interação com a blockchain Ethereum.
-**Solidity**: Linguagem de programação para contratos inteligentes na Ethereum.
-**Bootstrap 5**: Framework CSS para estilização e responsividade.
-**React Context API**: Gerenciamento de estado global para autenticação.
+- **Next.js 14.3.3**: Framework React para desenvolvimento web.
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Web3.js**: Biblioteca para interagir com o Ethereum blockchain.
+- **MetaMask**: Extensão de navegador para interação com a blockchain Ethereum.
+- **Solidity**: Linguagem de programação para contratos inteligentes na Ethereum.
+- **Bootstrap 5**: Framework CSS para estilização e responsividade.
+- **React Context API**: Gerenciamento de estado global para autenticação.
 
 
 # Pré-requisitos
@@ -92,19 +92,21 @@ npm install
 # Uso
 
 ## Executando o Projeto Localmente
-Inicie o servidor de desenvolvimento:
+
+1. Inicie o servidor de desenvolvimento:
 ```bash
 npm run dev
 ```
-Acesse o aplicativo no navegador:
+2. Acesse o aplicativo no navegador:
 
 Abra `http://localhost:3000` para ver o aplicativo.
 
 ## Interagindo com a Plataforma
-### Conecte-se com a MetaMask:
 
-Certifique-se de que sua MetaMask está conectada à rede Sepolia Testnet.
-Clique em `"Conectar MetaMask"` na página inicial.
+### 1. Conecte-se com a MetaMask:
+
+- Certifique-se de que sua MetaMask está conectada à rede Sepolia Testnet.
+- Clique em `**"Conectar MetaMask"**` na página inicial.
 
 ### Aposte em um Candidato:
 
