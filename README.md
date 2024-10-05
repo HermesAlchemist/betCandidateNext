@@ -1,9 +1,13 @@
 # **BetCandidate**
+
 **BetCandidate** é uma plataforma de apostas on-chain que permite aos usuários apostar em quem será o próximo presidente dos Estados Unidos. O aplicativo é construído com Next.js e React, utilizando contratos inteligentes na rede Ethereum (Sepolia Testnet) para garantir transparência e segurança em todas as transações.
+
 
 ---
 
+
 # Índice
+
 - [Visão Geral](#visão-geral)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
@@ -15,55 +19,70 @@
 - [Licença](#licença)
 - [Contato](#contato)
 
+
 ---
+
 
 # Visão Geral
+
 O BetCandidate permite que os usuários participem de apostas descentralizadas sobre o resultado das eleições presidenciais americanas. Utilizando a carteira MetaMask, os usuários podem conectar-se à plataforma, escolher seu candidato preferido e apostar uma quantidade desejada de ETH. Após o encerramento das eleições e divulgação do resultado oficial, os vencedores podem reivindicar seus prêmios diretamente na plataforma.
+
 
 ---
 
+
 # Funcionalidades
-Conexão com MetaMask: Os usuários podem conectar suas carteiras MetaMask para interagir com a plataforma.
-Verificação de Rede: O aplicativo verifica se o usuário está conectado à rede Sepolia e solicita a mudança de rede, se necessário.
-Apostar em Candidatos: Os usuários podem apostar em um dos candidatos disponíveis até a data limite de apostas.
-Reivindicar Prêmios: Após o resultado oficial, os vencedores podem reivindicar seus prêmios.
-Interface Intuitiva: Utiliza Bootstrap para uma interface amigável e responsiva.
-Transparência On-Chain: Todas as transações são realizadas através de contratos inteligentes na rede Ethereum (Sepolia Testnet).
+
+**Conexão com MetaMask**: Os usuários podem conectar suas carteiras MetaMask para interagir com a plataforma.
+**Verificação de Rede**: O aplicativo verifica se o usuário está conectado à rede Sepolia e solicita a mudança de rede, se necessário.
+**Apostar em Candidatos**: Os usuários podem apostar em um dos candidatos disponíveis até a data limite de apostas.
+**Reivindicar Prêmios**: Após o resultado oficial, os vencedores podem reivindicar seus prêmios.
+**Interface Intuitiva**: Utiliza Bootstrap para uma interface amigável e responsiva.
+**Transparência On-Chain**: Todas as transações são realizadas através de contratos inteligentes na rede Ethereum (Sepolia Testnet).
+
+
+---
+
 
 # Tecnologias Utilizadas
-Next.js 13: Framework React para desenvolvimento web.
-React: Biblioteca JavaScript para construção de interfaces de usuário.
-Web3.js: Biblioteca para interagir com o Ethereum blockchain.
-MetaMask: Extensão de navegador para interação com a blockchain Ethereum.
-Solidity: Linguagem de programação para contratos inteligentes na Ethereum.
-Bootstrap 5: Framework CSS para estilização e responsividade.
-React Context API: Gerenciamento de estado global para autenticação.
+
+**Next.js 14.3.3**: Framework React para desenvolvimento web.
+**React**: Biblioteca JavaScript para construção de interfaces de usuário.
+**Web3.js**: Biblioteca para interagir com o Ethereum blockchain.
+**MetaMask**: Extensão de navegador para interação com a blockchain Ethereum.
+**Solidity**: Linguagem de programação para contratos inteligentes na Ethereum.
+**Bootstrap 5**: Framework CSS para estilização e responsividade.
+**React Context API**: Gerenciamento de estado global para autenticação.
+
 
 # Pré-requisitos
+
 Antes de começar, certifique-se de ter instalado em sua máquina:
 
-Node.js (versão 14 ou superior)
-NPM (gerenciador de pacotes do Node.js)
-MetaMask (extensão instalada em seu navegador)
-Conta na rede Sepolia Testnet com ETH de teste (pode ser obtido em faucets)
+- **Node.js** (versão 14 ou superior)
+- **NPM** (gerenciador de pacotes do Node.js)
+- **MetaMask** (extensão instalada em seu navegador)
+- **Conta na rede Sepolia Testnet** com ETH de teste (pode ser obtido em faucets)
+
 
 # Instalação
-Clone o repositório:
+1. Clone o repositório:
 
 ```bash
 git clone https://github.com/HermesAlchemist/BetCandidateNext.git
 ```
 
-Navegue até o diretório do projeto:
+2. Navegue até o diretório do projeto:
 
 ```bash
 cd BetCandidate/dapp
 ```
-Instale as dependências:
+3. Instale as dependências:
 
 ```bash
 npm install
 ```
+
 
 # Uso
 
