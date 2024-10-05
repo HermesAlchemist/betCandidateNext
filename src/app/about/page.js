@@ -2,12 +2,46 @@
 'use client';
 
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useContext, useState } from "react";
+import { useRouter } from "next/navigation";
+import { AuthContext } from "@/contexts/AuthContext";
+import { checkNetwork, doLogin } from "@/services/Web3Service";
 
 export default function About() {
+    const { push } = useRouter();
+    const { walletAddress, setWalletAddress, logout } = useContext(AuthContext);
+    const [message, setMessage] = useState("");
+
     useEffect(() => {
         import('bootstrap/dist/js/bootstrap.bundle.min.js');
     }, []);
+
+    // Função para conectar MetaMask
+    async function btnLoginClick() {
+        if (walletAddress) {
+            setMessage("Verificando a rede, aguarde...");
+            try {
+                await checkNetwork();
+                setMessage("");
+                push("/bet");
+            } catch (err) {
+                console.error(err);
+                setMessage(err.message);
+            }
+        } else {
+            setMessage("Conectando à sua carteira, aguarde...");
+            try {
+                const account = await doLogin();
+                setWalletAddress(account);
+                setMessage("");
+                push("/bet");
+            } catch (err) {
+                console.error(err);
+                setMessage(err.message);
+            }
+        }
+    }
+
     return (
         <>
             <Head>
@@ -31,10 +65,21 @@ export default function About() {
                                 <a className="nav-link active" aria-current="page" href="/about">Regras</a>
                             </li>
                             <li className="nav-item">
-                                <button className="btn btn-outline-light ms-3" onClick={() => { }}>
-                                    <img src="/metamask.svg" width={24} className="me-2" alt="MetaMask" />
-                                    Conectar MetaMask
-                                </button>
+                                {walletAddress ? (
+                                    <>
+                                        <span className="navbar-text ms-3 text-light">
+                                            {walletAddress.substring(0, 6)}...{walletAddress.slice(-4)}
+                                        </span>
+                                        <button className="btn btn-outline-light ms-3" onClick={logout}>
+                                            Logout
+                                        </button>
+                                    </>
+                                ) : (
+                                    <button className="btn btn-outline-light ms-3" onClick={btnLoginClick}>
+                                        <img src="/metamask.svg" width={24} className="me-2" alt="MetaMask" />
+                                        Conectar MetaMask
+                                    </button>
+                                )}
                             </li>
                         </ul>
                     </div>
@@ -172,11 +217,17 @@ export default function About() {
                         </div>
                     </div>
                 </div>
+                {message && (
+                    <div className="alert alert-info mt-3 text-center" role="alert">
+                        {message}
+                    </div>
+                )}
                 <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                     <p className="col-md-4 mb-0 text-muted">&copy; 2024 BetCandidate, Inc</p>
                     <ul className="nav col-md-4 justify-content-end">
-                        <li className="nav-item"><a href="/" className="nav-link px-2 text-muted">Home</a></li>
+                        <li className="nav-item"><a href="/" className="nav-link px-2 text-muted">Início</a></li>
                         <li className="nav-item"><a href="/bet" className="nav-link px-2 text-muted">Apostar</a></li>
+                        <li className="nav-item"><a href="/about" className="nav-link px-2 text-muted">Regras</a></li>
                     </ul>
                 </footer>
             </div>
