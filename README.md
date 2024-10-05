@@ -2,6 +2,9 @@
 
 **BetCandidate** é uma plataforma de apostas on-chain que permite aos usuários apostar em quem será o próximo presidente dos Estados Unidos. O aplicativo é construído com Next.js e React, utilizando contratos inteligentes na rede Ethereum (Sepolia Testnet) para garantir transparência e segurança em todas as transações.
 
+# **Site Online Pelo Vecel**
+- **https://betcandidate.vercel.app/**
+
 
 ---
 
@@ -208,12 +211,6 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para d
 
 # Agradecimentos
 Agradecemos a todos os colaboradores e usuários que ajudam a melhorar o BetCandidate. E ao professor Luiz, que me auxiliou nesse projeto.
-
----
-
-
-# Screenshots
-(Opcional: Adicione screenshots do aplicativo para ilustrar a interface e funcionalidades.)
 
 
 ---
