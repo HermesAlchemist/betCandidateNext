@@ -11,7 +11,7 @@ export default function Home() {
 
   const { push } = useRouter();
 
-  const { walletAddress, setWalletAddress } = useContext(AuthContext);
+  const { walletAddress, setWalletAddress, logout } = useContext(AuthContext);
 
   const [message, setMessage] = useState("");
 
@@ -60,9 +60,14 @@ export default function Home() {
               </li>
               <li className="nav-item">
                 {walletAddress ? (
-                  <span className="navbar-text ms-3 text-light">
-                    {walletAddress.substring(0, 6)}...{walletAddress.slice(-4)}
-                  </span>
+                  <>
+                    <span className="navbar-text ms-3 text-light">
+                      {walletAddress.substring(0, 6)}...{walletAddress.slice(-4)}
+                    </span>
+                    <button className="btn btn-outline-light ms-3" onClick={logout}>
+                      Logout
+                    </button>
+                  </>
                 ) : (
                   <button className="btn btn-outline-light ms-3" onClick={btnLoginClick}>
                     <img src="/metamask.svg" width={24} className="me-2" alt="MetaMask" />
