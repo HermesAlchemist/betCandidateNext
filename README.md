@@ -106,7 +106,7 @@ Abra `http://localhost:3000` para ver o aplicativo.
 ### 1. Conecte-se com a MetaMask:
 
 - Certifique-se de que sua MetaMask está conectada à rede Sepolia Testnet.
-- Clique em `**"Conectar MetaMask"**` na página inicial.
+- Clique em **`"Conectar MetaMask"`** na página inicial.
 
 ### Aposte em um Candidato:
 
