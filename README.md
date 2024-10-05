@@ -106,28 +106,28 @@ Abra `http://localhost:3000` para ver o aplicativo.
 ### 1. Conecte-se com a MetaMask:
 
 - Certifique-se de que sua MetaMask está conectada à rede Sepolia Testnet.
-- Clique em **`"Conectar MetaMask"`** na página inicial.
+- Clique em **`Conectar MetaMask`** na página inicial.
 
-### Aposte em um Candidato:
+### 2. Aposte em um Candidato:
 
-Após conectar-se, você será redirecionado para a página de apostas.
-Escolha um dos candidatos disponíveis e clique em `"Apostar neste candidato"`.
-Insira o valor em ETH que deseja apostar.
+- Após conectar-se, você será redirecionado para a página de apostas.
+- Escolha um dos candidatos disponíveis e clique em **`Apostar neste candidato`**.
+- Insira o valor em ETH que deseja apostar.
 
-### Reivindique seu Prêmio:
+### 3. Reivindique seu Prêmio:
 
-Após o resultado oficial das eleições, acesse a plataforma.
-Se o candidato em quem você apostou venceu, clique em "Pegar meu prêmio" para receber seus ganhos.
+- Após o resultado oficial das eleições, acesse a plataforma.
+- Se o candidato em quem você apostou venceu, clique em "Pegar meu prêmio" para receber seus ganhos.
 
 ## Observações
-Taxa de Comissão: Uma taxa de 10% é deduzida do montante total das apostas como comissão para manutenção da plataforma.
-Transparência: O código do contrato inteligente é público e pode ser verificado no Etherscan.
+- **Taxa de Comissão**: Uma taxa de 10% é deduzida do montante total das apostas como comissão para manutenção da plataforma.
+- **Transparência**: O código do contrato inteligente é público e pode ser verificado no Etherscan.
 
 # Contrato Inteligente
 O contrato inteligente está implantado na rede Sepolia Testnet.
 
-- Endereço do Contrato: 0xf769620cB16Dde326539B403A89c4E6e46A99a27
-- Etherscan: [Ver Contrato no Etherscan](https://sepolia.etherscan.io/address/0xf769620cb16dde326539b403a89c4e6e46a99a27)
+- **Endereço do Contrato**: `0xf769620cB16Dde326539B403A89c4E6e46A99a27`
+- **Etherscan**: [Ver Contrato no Etherscan](https://sepolia.etherscan.io/address/0xf769620cb16dde326539b403a89c4e6e46a99a27)
 
 # Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
