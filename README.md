@@ -249,13 +249,10 @@ Se você encontrar problemas ao executar o aplicativo, tente as seguintes etapas
 
 
 # Desenvolvimento Futuro
-Adicionar Mais Candidatos:
 
-Expandir a lista de candidatos disponíveis para apostas.
-Melhorias na Interface:
-
-Implementar animações e transições suaves.
-Melhorar a responsividade em dispositivos móveis.
+- **Melhorias na Interface**:
+   - Implementar animações e transições suaves.
+   - Melhorar a responsividade em dispositivos móveis.
 - **Funcionalidades Avançadas**:
    - Implementar um sistema de apostas múltiplas.
    - Adicionar suporte a outras criptomoedas.
