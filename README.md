@@ -44,19 +44,20 @@ Conta na rede Sepolia Testnet com ETH de teste (pode ser obtido em faucets)
 # Instalação
 Clone o repositório:
 
-bash
-Copiar código
-git clone https://github.com/seu-usuario/BetCandidate.git
+```bash
+git clone https://github.com/HermesAlchemist/BetCandidateNext.git
+```
+
 Navegue até o diretório do projeto:
 
-bash
-Copiar código
+```bash
 cd BetCandidate/dapp
+```
 Instale as dependências:
 
-bash
-Copiar código
+```bash
 npm install
+```
 
 # Uso
 Executando o Projeto Localmente
