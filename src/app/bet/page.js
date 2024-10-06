@@ -22,6 +22,10 @@ export default function Bet() {
         winner: 0
     });
 
+    const [showModal, setShowModal] = useState(false);
+    const [selectedCandidate, setSelectedCandidate] = useState(null);
+    const [amount, setAmount] = useState('');
+
     useEffect(() => {
         import('bootstrap/dist/js/bootstrap.bundle.min.js');
 
@@ -46,29 +50,34 @@ export default function Bet() {
     }, [walletAddress]);
 
     function processBet(candidate) {
-        setMessage("Verificando a rede, aguarde...");
-        checkNetwork()
-            .then(() => {
-                const amount = prompt("Quantidade em ETH para apostar:", "0.01");
-                if (amount !== null && amount !== "") {
-                    setMessage("Processando a aposta, aguarde...");
-                    return placeBet(candidate, amount);
-                } else {
-                    throw new Error("Aposta cancelada pelo usuário.");
-                }
-            })
-            .then(() => {
-                alert("Aposta recebida com sucesso! As informações podem demorar alguns segundos para serem atualizadas.");
-                setMessage("");
-                return getDispute();
-            })
-            .then(dispute => {
-                setDispute(dispute);
-            })
-            .catch(err => {
-                console.error(err);
-                setMessage(err.message);
-            });
+        setSelectedCandidate(candidate);
+        setAmount('0.01'); // Valor padrão
+        setShowModal(true);
+    }
+
+    function confirmBet() {
+        if (amount !== null && amount !== "") {
+            setShowModal(false);
+            setMessage("Processando a aposta, aguarde...");
+            checkNetwork()
+                .then(() => {
+                    return placeBet(selectedCandidate, amount);
+                })
+                .then(() => {
+                    alert("Aposta recebida com sucesso! As informações podem demorar alguns segundos para serem atualizadas.");
+                    setMessage("");
+                    return getDispute();
+                })
+                .then(dispute => {
+                    setDispute(dispute);
+                })
+                .catch(err => {
+                    console.error(err);
+                    setMessage(err.message);
+                });
+        } else {
+            alert("Por favor, insira um valor válido.");
+        }
     }
 
     function btnLoginClick() {
@@ -191,6 +200,34 @@ export default function Bet() {
                         {message}
                     </div>
                 )}
+                {/* Modal para Inserir Quantia de Aposta */}
+                <div className={`modal fade ${showModal ? 'show d-block' : ''}`} tabIndex="-1" role="dialog">
+                    <div className="modal-dialog modal-dialog-centered" role="document">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title">Apostar no Candidato</h5>
+                                <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
+                            </div>
+                            <div className="modal-body">
+                                <p>Digite a quantidade em ETH que deseja apostar:</p>
+                                <input
+                                    type="number"
+                                    className="form-control"
+                                    value={amount}
+                                    onChange={(e) => setAmount(e.target.value)}
+                                    min="0"
+                                    step="0.001"
+                                    placeholder="0.01"
+                                />
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>Cancelar</button>
+                                <button type="button" className="btn btn-primary" onClick={confirmBet}>Confirmar Aposta</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {showModal && <div className="modal-backdrop fade show"></div>}
             </div>
             <footer className="bg-light text-muted py-4 mt-5">
                 <div className="container text-center">
