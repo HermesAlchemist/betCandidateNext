@@ -6,6 +6,7 @@ import { useEffect, useContext, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AuthContext } from "@/contexts/AuthContext";
 import { checkNetwork, doLogin } from "@/services/Web3Service";
+import Footer from "@/components/Footer";
 
 export default function About() {
     const { push } = useRouter();
@@ -225,14 +226,7 @@ export default function About() {
                         {message}
                     </div>
                 )}
-                <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-                    <p className="col-md-4 mb-0 text-muted">&copy; 2024 BetCandidate, Inc</p>
-                    <ul className="nav col-md-4 justify-content-end">
-                        <li className="nav-item"><a href="/" className="nav-link px-2 text-muted">Início</a></li>
-                        <li className="nav-item"><a href="/bet" className="nav-link px-2 text-muted">Apostar</a></li>
-                        <li className="nav-item"><a href="/about" className="nav-link px-2 text-muted">Regras</a></li>
-                    </ul>
-                </footer>
+                <Footer />
             </div>
         </>
     );

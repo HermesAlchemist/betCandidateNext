@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState, useContext } from "react";
 import Web3 from "web3";
 import { AuthContext } from "@/contexts/AuthContext";
+import Footer from "@/components/Footer";
 
 export default function Bet() {
     const { push } = useRouter();
@@ -277,22 +278,7 @@ export default function Bet() {
                 </div>
                 {showModal && <div className="modal-backdrop fade show"></div>}
             </div>
-            <footer className="bg-light text-muted py-4 mt-5">
-                <div className="container text-center">
-                    <p className="mb-1">&copy; 2024 BetCandidate, Inc. Todos os direitos reservados.</p>
-                    <ul className="list-inline">
-                        <li className="list-inline-item">
-                            <a href="/" className="text-muted">Início</a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="/bet" className="text-muted">Apostar</a>
-                        </li>
-                        <li className="list-inline-item">
-                            <a href="/about" className="text-muted">Regras</a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+            <Footer />
         </>
     );
 }

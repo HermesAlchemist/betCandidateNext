@@ -1,4 +1,3 @@
-// src/app/page.js
 "use client";
 
 import Head from "next/head";
@@ -6,13 +5,11 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState, useContext } from "react";
 import { doLogin } from "@/services/Web3Service";
 import { AuthContext } from "@/contexts/AuthContext";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-
   const { push } = useRouter();
-
   const { walletAddress, setWalletAddress, logout } = useContext(AuthContext);
-
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -21,8 +18,7 @@ export default function Home() {
 
   async function btnLoginClick() {
     if (walletAddress) {
-      // Se já estiver conectado, vai para a página de apostas
-      push("/bet");
+      push("/bet"); // Se já estiver conectado, redireciona para a página de apostas
     } else {
       setMessage("Conectando à sua carteira, aguarde...");
       try {
@@ -56,7 +52,7 @@ export default function Home() {
                 <a className="nav-link active" aria-current="page" href="/">Início</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="/bet">Apostar</a>
+                <a className="nav-link" href="/bet">Apostar</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/about">Regras</a>
@@ -110,22 +106,9 @@ export default function Home() {
           </div>
         )}
       </div>
-      <footer className="bg-light text-muted py-4">
-        <div className="container text-center">
-          <p className="mb-1">&copy; 2024 BetCandidate, Inc. Todos os direitos reservados.</p>
-          <ul className="list-inline">
-            <li className="list-inline-item">
-              <a href="/" className="text-muted">Início</a>
-            </li>
-            <li className="list-inline-item">
-              <a href="/bet" className="text-muted">Apostar</a>
-            </li>
-            <li className="list-inline-item">
-              <a href="/about" className="text-muted">Regras</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+
+      {/* Exibir o endereço do Smart Contract no rodapé */}
+      <Footer />
     </>
   );
 }
