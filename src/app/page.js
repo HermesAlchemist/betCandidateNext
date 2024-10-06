@@ -56,6 +56,9 @@ export default function Home() {
                 <a className="nav-link active" aria-current="page" href="/">Início</a>
               </li>
               <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="/bet">Apostar</a>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link" href="/about">Regras</a>
               </li>
               <li className="nav-item">
@@ -113,6 +116,9 @@ export default function Home() {
           <ul className="list-inline">
             <li className="list-inline-item">
               <a href="/" className="text-muted">Início</a>
+            </li>
+            <li className="list-inline-item">
+              <a href="/bet" className="text-muted">Apostar</a>
             </li>
             <li className="list-inline-item">
               <a href="/about" className="text-muted">Regras</a>

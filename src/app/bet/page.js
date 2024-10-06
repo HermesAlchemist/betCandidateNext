@@ -10,7 +10,7 @@ import { AuthContext } from "@/contexts/AuthContext";
 
 export default function Bet() {
     const { push } = useRouter();
-    const { walletAddress, logout } = useContext(AuthContext);
+    const { walletAddress, logout, isAuthLoading } = useContext(AuthContext);
     const [message, setMessage] = useState("");
     const [dispute, setDispute] = useState({
         candidate1: "Loading...",
@@ -19,7 +19,9 @@ export default function Bet() {
         image2: "https://img.odcdn.com.br/wp-content/uploads/2017/06/20170609141843.jpg",
         total1: 0,
         total2: 0,
-        winner: 0
+        winner: 0,
+        totalBettors1: 0,
+        totalBettors2: 0
     });
 
     const [showModal, setShowModal] = useState(false);
@@ -28,6 +30,10 @@ export default function Bet() {
 
     useEffect(() => {
         import('bootstrap/dist/js/bootstrap.bundle.min.js');
+
+        if (isAuthLoading) {
+            return;
+        }
 
         if (!walletAddress) {
             push("/");
@@ -47,7 +53,7 @@ export default function Bet() {
                     setMessage(err.message);
                 });
         }
-    }, [walletAddress]);
+    }, [walletAddress, isAuthLoading]);
 
     function processBet(candidate) {
         setSelectedCandidate(candidate);
@@ -101,6 +107,17 @@ export default function Bet() {
             });
     }
 
+    // Calcular total de apostadores
+    const totalBettors = parseInt(dispute.totalBettors1) + parseInt(dispute.totalBettors2);
+
+    let percentage1 = 50;
+    let percentage2 = 50;
+
+    if (totalBettors > 0) {
+        percentage1 = (parseInt(dispute.totalBettors1) / totalBettors) * 100;
+        percentage2 = (parseInt(dispute.totalBettors2) / totalBettors) * 100;
+    }
+
     return (
         <>
             <Head>
@@ -119,6 +136,9 @@ export default function Bet() {
                         <ul className="navbar-nav align-items-center">
                             <li className="nav-item">
                                 <a className="nav-link" href="/">Início</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="/bet">Apostar</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="/about">Regras</a>
@@ -153,6 +173,36 @@ export default function Bet() {
                         : <p className="lead">Eleições encerradas! Veja o vencedor(a) abaixo e solicite seu prêmio.</p>
                     }
                 </header>
+                {/* Envolver a barra de progresso em uma row e col */}
+                <div className="row justify-content-center">
+                    <div className="col-md-10 mb-2 text-center">
+                        <h5>Distribuição de Apostadores</h5>
+                    </div>
+                    <div className="col-md-10 mb-4">
+                        <div className="progress mb-2">
+                            <div
+                                className="progress-bar bg-danger"
+                                role="progressbar"
+                                style={{ width: `${percentage1}%` }}
+                                aria-valuenow={percentage1}
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
+                                {dispute.candidate1}: {percentage1.toFixed(2)}%
+                            </div>
+                            <div
+                                className="progress-bar bg-primary"
+                                role="progressbar"
+                                style={{ width: `${percentage2}%` }}
+                                aria-valuenow={percentage2}
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                            >
+                                {dispute.candidate2}: {percentage2.toFixed(2)}%
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className="row justify-content-center">
                     {(dispute.winner == 0 || dispute.winner == 1) && (
                         <div className="col-md-5 mb-4">
@@ -165,7 +215,6 @@ export default function Bet() {
                                 <div className="card-body">
                                     <h5 className="card-title">{dispute.candidate1}</h5>
                                     <p className="card-text">{Web3.utils.fromWei(dispute.total1, "ether")} ETH apostados</p>
-                                    <p className="card-text">0 Apostadores</p>
                                     {dispute.winner == 1
                                         ? <button className="btn btn-primary" onClick={btnClaimClick}>Pegar meu prêmio</button>
                                         : <button className="btn btn-primary" onClick={() => processBet(1)}>Apostar neste candidato</button>
@@ -185,7 +234,6 @@ export default function Bet() {
                                 <div className="card-body">
                                     <h5 className="card-title">{dispute.candidate2}</h5>
                                     <p className="card-text">{Web3.utils.fromWei(dispute.total2, "ether")} ETH apostados</p>
-                                    <p className="card-text">0 Apostadores</p>
                                     {dispute.winner == 2
                                         ? <button className="btn btn-primary" onClick={btnClaimClick}>Pegar meu prêmio</button>
                                         : <button className="btn btn-primary" onClick={() => processBet(2)}>Apostar neste candidato</button>
@@ -235,6 +283,9 @@ export default function Bet() {
                     <ul className="list-inline">
                         <li className="list-inline-item">
                             <a href="/" className="text-muted">Início</a>
+                        </li>
+                        <li className="list-inline-item">
+                            <a href="/bet" className="text-muted">Apostar</a>
                         </li>
                         <li className="list-inline-item">
                             <a href="/about" className="text-muted">Regras</a>

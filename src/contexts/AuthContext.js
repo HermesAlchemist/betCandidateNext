@@ -9,12 +9,14 @@ export const AuthContext = createContext();
 export function AuthProvider({ children }) {
     const { push } = useRouter();
     const [walletAddress, setWalletAddress] = useState(null);
+    const [isAuthLoading, setIsAuthLoading] = useState(true); // Novo estado
 
     useEffect(() => {
         const wallet = localStorage.getItem("wallet");
         if (wallet) {
             setWalletAddress(wallet);
         }
+        setIsAuthLoading(false); // Autenticação carregada
 
         if (typeof window !== 'undefined' && window.ethereum) {
             window.ethereum.on('accountsChanged', handleAccountsChanged);
@@ -45,7 +47,7 @@ export function AuthProvider({ children }) {
     };
 
     return (
-        <AuthContext.Provider value={{ walletAddress, setWalletAddress, logout }}>
+        <AuthContext.Provider value={{ walletAddress, setWalletAddress, logout, isAuthLoading }}>
             {children}
         </AuthContext.Provider>
     );
